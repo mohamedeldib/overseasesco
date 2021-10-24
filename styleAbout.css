@@ -1,0 +1,38 @@
+* {box-sizing: border-box;}
+kbd {font-size: 0.9em;display:inline-block;line-height:1.1;}
+#diagonal-text {
+  color: #fff;
+  padding: 25px 0 5px;
+  transform: rotate(-2deg) skew(-2deg);
+  -webkit-transform: rotate(-2deg) skew(-2deg);
+  -moz-transform: rotate(-2deg) skew(-2deg);
+  -o-transform: rotate(-2deg) skew(-2deg);
+  -ms-transform: rotate(-2deg) skew(-2deg);
+  margin-bottom: -20px;
+  /* Added */
+  padding-bottom: 10px;
+
+}
+
+#diagonal h1{
+    color:#fff;
+background-color:#047171;
+width: max-content;
+padding: 5px;
+    box-shadow: 5px 10px #047171ad;
+}
+#diagonal {
+  width: 100%;
+  background-color: rgba(128, 185, 46, 0.7);
+  background: teal;
+  color: rgba(128, 185, 46, 0.7);
+  transform: rotate(2deg) skew(2deg);
+  -webkit-transform: rotate(2deg) skew(2deg);
+  -moz-transform: rotate(2deg) skew(2deg);
+  -o-transform: rotate(2deg) skew(2deg);
+  -ms-transform: rotate(2deg) skew(2deg);
+  border-radius: 5px;
+}
+#diagonal .container {
+  padding: 0 100px 100px 100px;
+}

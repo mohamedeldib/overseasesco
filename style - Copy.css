@@ -1,0 +1,169 @@
+body{
+      background: #f7f7f7;
+}
+.container {
+
+ 
+  /* we don't want the pseudo-elements sticking out */
+}
+
+.container svg {
+  display: block;
+}
+
+section {
+  position: relative;
+  padding: 10em;
+  background: teal;
+  color: #fff;
+  text-align: left;
+}
+
+section h1 {
+  margin: 0;
+  padding: 0;
+  font-size: 2.8em;
+  font-weight: 400;
+    color: #fff;
+
+background-color:#047171;
+width: max-content;
+padding: 5px;
+    box-shadow: 5px 10px #047171ad;
+}
+
+ 
+section p {
+color: #333;
+    font-size: 1.2em;
+    line-height: 1.5;
+    font-weight: 600;
+    padding-bottom: 10px;
+    font-family: "Times New Roman", monospace;
+}
+
+.text:first-child {
+  text-align: left;
+}
+
+.text:nth-child(2) {
+  text-align: left;
+}
+
+.col-2 .column {
+  width: 49%;
+}
+
+.col-3 .column {
+  padding: 0 1%;
+  width: 33%;
+  text-align: center;
+}
+
+.col-3 .column p {
+  padding: 1.4em;
+}
+
+.column {
+  display: inline-block;
+  vertical-align: top;
+}
+
+.color {
+  background: #f7f7f7;
+}
+
+/*** Individual section styles and separators ***/
+/* Common style for pseudo-elements */
+section::before,
+section::after {
+  position: absolute;
+  content: '';
+  pointer-events: none;
+}
+
+/* Triangles */
+.ss-style-triangles::before,
+.ss-style-triangles::after {
+  left: 50%;
+  width: 100px;
+  height: 100px;
+  -webkit-transform: translateX(-50%) rotate(45deg);
+  transform: translateX(-50%) rotate(45deg);
+}
+
+.ss-style-triangles::before {
+  top: -50px;
+  background: teal;
+}
+
+.ss-style-triangles::after {
+  bottom: -50px;
+  z-index: 10;
+  background: inherit;
+}
+
+/* Double Diagonal line */
+.ss-style-doublediagonal {
+    z-index: 1;
+    padding-top: 1em;
+    background: #f7f7f7;
+    padding-bottom: 60px;
+}
+
+.ss-style-doublediagonal::before,
+.ss-style-doublediagonal::after {
+  top: 0;
+  left: -25%;
+  z-index: -1;
+  width: 150%;
+  height: 75%;
+  background: inherit;
+  -webkit-transform: rotate(-2deg);
+  transform: rotate(-2deg);
+  -webkit-transform-origin: 0 0;
+  transform-origin: 0 0;
+}
+
+.ss-style-doublediagonal::before {
+  height: 50%;
+  background: #003434;
+  -webkit-transform: rotate(-3deg);
+  transform: rotate(-3deg);
+  -webkit-transform-origin: 3% 0;
+  transform-origin: 3% 0;
+}
+
+/* Half Circle */
+
+
+
+/* Media Queries for the layout */
+@media screen and (max-width: 68em) {
+  section {
+    font-size: 80%;
+  }
+}
+@media screen and (max-width: 54em) {
+  .column {
+    display: block;
+    width: 100% !important;
+  }
+
+  .text:first-child,
+  .text:nth-child(2) {
+    text-align: center;
+  }
+
+  .icon {
+    margin: 0 auto;
+  }
+
+  .col-2 .column:first-child .icon {
+    margin: 0 auto 50px;
+  }
+
+  .col-2 .column:nth-child(2) .icon {
+    margin: 50px auto 0;
+  }
+}
